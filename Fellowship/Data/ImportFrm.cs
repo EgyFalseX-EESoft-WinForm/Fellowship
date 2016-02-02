@@ -20,10 +20,15 @@ namespace Fellowship.Data
 
         private void btnImport_Click(object sender, EventArgs e)
         {
+            if (FXFW.SqlDB.IsNullOrEmpty(txtYear.EditValue) || txtYear.EditValue.ToString() == "0")
+            {
+                MessageBox.Show("يجب ادخال السنة");
+                return;
+            }
             dsFellowship.TblAllData.Clear();
             try
             {
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.Abort)
+                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
                     return;
                 //string constr = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", ofd.FileName);
                 string constr = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Persist Security Info=True", ofd.FileName);
@@ -87,6 +92,7 @@ namespace Fellowship.Data
                     mem.rema = row["rema"].ToString();
                     mem.datein = datein;
                     mem.userin = Program.UserInfo.UserId;
+                    mem.YearId = Convert.ToInt32(txtYear.EditValue);
 
                     dsFellowship.TblAllData.AddTblAllDataRow(mem);
                 }
@@ -129,7 +135,7 @@ namespace Fellowship.Data
                 bulkCopy.ColumnMappings.Add("edaraid", "edaraid"); bulkCopy.ColumnMappings.Add("mobil", "mobil");
                 bulkCopy.ColumnMappings.Add("address", "address"); bulkCopy.ColumnMappings.Add("moahedcode", "moahedcode");
                 bulkCopy.ColumnMappings.Add("moaheldate", "moaheldate"); bulkCopy.ColumnMappings.Add("jobcode", "jobcode");
-                bulkCopy.ColumnMappings.Add("rema", "rema");
+                bulkCopy.ColumnMappings.Add("rema", "rema"); bulkCopy.ColumnMappings.Add("YearId", "YearId");
                 bulkCopy.ColumnMappings.Add("userin", "userin"); bulkCopy.ColumnMappings.Add("datein", "datein");
 
                 bulkCopy.DestinationTableName = BulkTableName;

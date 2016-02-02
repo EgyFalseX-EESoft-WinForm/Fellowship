@@ -108,6 +108,29 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vQry006TableAdapter" GeneratorDataComponentClassName="vQry006TableAdapter" Name="vQry006" UserDataComponentName="vQry006TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FellowshipConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CDEDARET.EdaraId, CDEDARET.EDARET, CDSyndicate.Syndicate, COUNT(TblAllData.memberid) AS CountNum
+FROM            CDEDARET INNER JOIN
+                         CDSyndicate ON CDEDARET.SyndicateId = CDSyndicate.SyndicateId LEFT OUTER JOIN
+                         TblAllData ON CDEDARET.EdaraId = TblAllData.edaraid
+GROUP BY CDEDARET.EdaraId, CDEDARET.EDARET, CDSyndicate.Syndicate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EdaraId" DataSetColumn="EdaraId" />
+              <Mapping SourceColumn="EDARET" DataSetColumn="EDARET" />
+              <Mapping SourceColumn="Syndicate" DataSetColumn="Syndicate" />
+              <Mapping SourceColumn="CountNum" DataSetColumn="CountNum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="FellowshipConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ServerDatetime" MethodsParameterType="CLR" Modifier="Public" Name="ServerDatetime" QueryType="Scalar" ScalarCallRetval="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ServerDatetime">
@@ -125,7 +148,7 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
   <xs:element name="DSFellowshipQuery" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSFellowshipQuery" msprop:Generator_UserDSName="DSFellowshipQuery">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TblMember" msprop:Generator_TableClassName="TblMemberDataTable" msprop:Generator_TableVarName="tableTblMember" msprop:Generator_TablePropName="TblMember" msprop:Generator_RowDeletingName="TblMemberRowDeleting" msprop:Generator_RowChangingName="TblMemberRowChanging" msprop:Generator_RowEvHandlerName="TblMemberRowChangeEventHandler" msprop:Generator_RowDeletedName="TblMemberRowDeleted" msprop:Generator_UserTableName="TblMember" msprop:Generator_RowChangedName="TblMemberRowChanged" msprop:Generator_RowEvArgName="TblMemberRowChangeEvent" msprop:Generator_RowClassName="TblMemberRow">
+        <xs:element name="TblMember" msprop:Generator_TableClassName="TblMemberDataTable" msprop:Generator_TableVarName="tableTblMember" msprop:Generator_RowChangedName="TblMemberRowChanged" msprop:Generator_TablePropName="TblMember" msprop:Generator_RowDeletingName="TblMemberRowDeleting" msprop:Generator_RowChangingName="TblMemberRowChanging" msprop:Generator_RowEvHandlerName="TblMemberRowChangeEventHandler" msprop:Generator_RowDeletedName="TblMemberRowDeleted" msprop:Generator_RowClassName="TblMemberRow" msprop:Generator_UserTableName="TblMember" msprop:Generator_RowEvArgName="TblMemberRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MemberID" msprop:Generator_ColumnVarNameInTable="columnMemberID" msprop:Generator_ColumnPropNameInRow="MemberID" msprop:Generator_ColumnPropNameInTable="MemberIDColumn" msprop:Generator_UserColumnName="MemberID" type="xs:long" />
@@ -147,7 +170,7 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vQry002" msprop:Generator_TableClassName="vQry002DataTable" msprop:Generator_TableVarName="tablevQry002" msprop:Generator_RowChangedName="vQry002RowChanged" msprop:Generator_TablePropName="vQry002" msprop:Generator_RowDeletingName="vQry002RowDeleting" msprop:Generator_RowChangingName="vQry002RowChanging" msprop:Generator_RowEvHandlerName="vQry002RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry002RowDeleted" msprop:Generator_RowClassName="vQry002Row" msprop:Generator_UserTableName="vQry002" msprop:Generator_RowEvArgName="vQry002RowChangeEvent">
+        <xs:element name="vQry002" msprop:Generator_TableClassName="vQry002DataTable" msprop:Generator_TableVarName="tablevQry002" msprop:Generator_TablePropName="vQry002" msprop:Generator_RowDeletingName="vQry002RowDeleting" msprop:Generator_RowChangingName="vQry002RowChanging" msprop:Generator_RowEvHandlerName="vQry002RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry002RowDeleted" msprop:Generator_UserTableName="vQry002" msprop:Generator_RowChangedName="vQry002RowChanged" msprop:Generator_RowEvArgName="vQry002RowChangeEvent" msprop:Generator_RowClassName="vQry002Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MEM" msprop:Generator_ColumnVarNameInTable="columnMEM" msprop:Generator_ColumnPropNameInRow="MEM" msprop:Generator_ColumnPropNameInTable="MEMColumn" msprop:Generator_UserColumnName="MEM" type="xs:int" minOccurs="0" />
@@ -194,7 +217,7 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vQry005" msprop:Generator_TableClassName="vQry005DataTable" msprop:Generator_TableVarName="tablevQry005" msprop:Generator_TablePropName="vQry005" msprop:Generator_RowDeletingName="vQry005RowDeleting" msprop:Generator_RowChangingName="vQry005RowChanging" msprop:Generator_RowEvHandlerName="vQry005RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry005RowDeleted" msprop:Generator_UserTableName="vQry005" msprop:Generator_RowChangedName="vQry005RowChanged" msprop:Generator_RowEvArgName="vQry005RowChangeEvent" msprop:Generator_RowClassName="vQry005Row">
+        <xs:element name="vQry005" msprop:Generator_TableClassName="vQry005DataTable" msprop:Generator_TableVarName="tablevQry005" msprop:Generator_RowChangedName="vQry005RowChanged" msprop:Generator_TablePropName="vQry005" msprop:Generator_RowDeletingName="vQry005RowDeleting" msprop:Generator_RowChangingName="vQry005RowChanging" msprop:Generator_RowEvHandlerName="vQry005RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry005RowDeleted" msprop:Generator_RowClassName="vQry005Row" msprop:Generator_UserTableName="vQry005" msprop:Generator_RowEvArgName="vQry005RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GovId" msprop:Generator_ColumnVarNameInTable="columnGovId" msprop:Generator_ColumnPropNameInRow="GovId" msprop:Generator_ColumnPropNameInTable="GovIdColumn" msprop:Generator_UserColumnName="GovId" type="xs:unsignedByte" />
@@ -210,6 +233,28 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vQry006" msprop:Generator_TableClassName="vQry006DataTable" msprop:Generator_TableVarName="tablevQry006" msprop:Generator_TablePropName="vQry006" msprop:Generator_RowDeletingName="vQry006RowDeleting" msprop:Generator_RowChangingName="vQry006RowChanging" msprop:Generator_RowEvHandlerName="vQry006RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry006RowDeleted" msprop:Generator_UserTableName="vQry006" msprop:Generator_RowChangedName="vQry006RowChanged" msprop:Generator_RowEvArgName="vQry006RowChangeEvent" msprop:Generator_RowClassName="vQry006Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EdaraId" msprop:Generator_ColumnVarNameInTable="columnEdaraId" msprop:Generator_ColumnPropNameInRow="EdaraId" msprop:Generator_ColumnPropNameInTable="EdaraIdColumn" msprop:Generator_UserColumnName="EdaraId" type="xs:int" />
+              <xs:element name="EDARET" msprop:Generator_ColumnVarNameInTable="columnEDARET" msprop:Generator_ColumnPropNameInRow="EDARET" msprop:Generator_ColumnPropNameInTable="EDARETColumn" msprop:Generator_UserColumnName="EDARET">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Syndicate" msprop:Generator_ColumnVarNameInTable="columnSyndicate" msprop:Generator_ColumnPropNameInRow="Syndicate" msprop:Generator_ColumnPropNameInTable="SyndicateColumn" msprop:Generator_UserColumnName="Syndicate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCountNum" msprop:Generator_ColumnPropNameInRow="CountNum" msprop:Generator_ColumnPropNameInTable="CountNumColumn" msprop:Generator_UserColumnName="CountNum" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -219,6 +264,10 @@ SELECT GovId, GOV, (SELECT COUNT(*) AS Expr1 FROM CdEdara WHERE (ModereaId = CDG
     <xs:unique name="vQry005_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vQry005" />
       <xs:field xpath="mstns:GovId" />
+    </xs:unique>
+    <xs:unique name="vQry006_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vQry006" />
+      <xs:field xpath="mstns:EdaraId" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -433,7 +433,17 @@ namespace Fellowship
                 Data.Show();
             }));
             SplashScreenManager.CloseForm();
-        }        
+        }
+        private void mbFellowshipXRep02_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
+            this.Invoke(new MethodInvoker(() =>
+            {
+                XRep02 FrmRep = new XRep02();
+                Misc.Misc.ShowPrintPreview(FrmRep);
+            }));
+            SplashScreenManager.CloseForm();
+        }
         private void mbFellowshipQry001_ItemClick(object sender, ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
@@ -484,9 +494,20 @@ namespace Fellowship
             }));
             SplashScreenManager.CloseForm();
         }
+        private void mbFellowshipQry006_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
+            this.Invoke(new MethodInvoker(() =>
+            {
+                Qry.Qry006 Data = new Qry.Qry006() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["Qry.png"], 32, false) };
+                Data.Show();
+            }));
+            SplashScreenManager.CloseForm();
+        }
         #endregion
 
-
+        
+    
     }
 
 }
