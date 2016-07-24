@@ -218,6 +218,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSFellowshipReport.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\tblmembersp_schoolsWFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tblmembersp_schoolsWFrm.Designer.cs">
+      <DependentUpon>tblmembersp_schoolsWFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tblmembersp_schoolsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\tblmembersp_schoolsFrm.designer.cs">
+      <DependentUpon>tblmembersp_schoolsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\DeleteTblAllDataFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +460,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Code\CodeFrm.resx">
       <DependentUpon>CodeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\tblmembersp_schoolsWFrm.resx">
+      <DependentUpon>tblmembersp_schoolsWFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\tblmembersp_schoolsFrm.resx">
+      <DependentUpon>tblmembersp_schoolsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\DeleteTblAllDataFrm.resx">
       <DependentUpon>DeleteTblAllDataFrm.cs</DependentUpon>

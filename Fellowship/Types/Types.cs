@@ -19,7 +19,8 @@ namespace Fellowship.Types
         CDJob,
         CDAttach,
         TblMember,
-        TblSarf
+        TblSarf,
+        school
     }
 
 }

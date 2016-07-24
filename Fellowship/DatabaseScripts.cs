@@ -72,7 +72,7 @@ namespace Fellowship
                 SELECT        COUNT(dbo.TblAllData.memberid) AS MEM, dbo.TblAllData.schoolcode, dbo.TblAllData.govid, dbo.TblAllData.edaraid, dbo.TblAllData.moahedcode, dbo.TblAllData.jobcode, dbo.CDGov.GOV, dbo.CdEdara.Edara, 
                          dbo.CdMoahel.Moahel, dbo.school.School, dbo.CdJobId.Job
                 FROM            dbo.TblAllData LEFT OUTER JOIN
-                                         dbo.school ON dbo.TblAllData.schoolcode = dbo.school.code LEFT OUTER JOIN
+                                         dbo.school ON dbo.TblAllData.schoolcode = dbo.school.schoolcode LEFT OUTER JOIN
                                          dbo.CdJobId ON dbo.TblAllData.jobcode = dbo.CdJobId.JobId LEFT OUTER JOIN
                                          dbo.CDGov ON dbo.TblAllData.govid = dbo.CDGov.GovId LEFT OUTER JOIN
                                          dbo.CdEdara ON dbo.TblAllData.edaraid = dbo.CdEdara.EdaraId LEFT OUTER JOIN

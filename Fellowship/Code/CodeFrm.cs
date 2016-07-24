@@ -70,6 +70,14 @@ namespace Fellowship
                     gridControlCode.DataSource = cDAttachBindingSource;
                     Text += " المرفقات";
                     break;
+                case TablesNames.school:
+                    cDEDARETTableAdapter.Fill(dSFellowship.CDEDARET);
+                    
+                    gridControlCode.MainView = gridViewschool;
+                    schoolTableAdapter.Fill(dSFellowship.school);
+                    gridControlCode.DataSource = dSFellowship.school;
+                    Text += " المدارس الخاصه";
+                    break;
                 default:
                     break;
             }
@@ -181,6 +189,16 @@ namespace Fellowship
                         cDAttachTableAdapter.Update(rowCDAttach);
                         dSFellowship.CDAttach.AcceptChanges();
                         break;
+
+                    case "gridViewschool":
+                        Fellowship.DataSources.DSFellowship.schoolRow rowschool = (Fellowship.DataSources.DSFellowship.schoolRow)GV.GetFocusedDataRow();
+                        if (rowschool.RowState == DataRowState.Detached)
+                            rowschool.schoolcode = Convert.ToInt32(SqlDB.GetNewID("school", "schoolcode"));
+                        //cDAttachBindingSource.EndEdit();
+                        schoolTableAdapter.Update(rowschool);
+                        dSFellowship.school.AcceptChanges();
+                        break;
+
                     default:
                         break;
                 }
@@ -232,6 +250,11 @@ namespace Fellowship
                         Fellowship.DataSources.DSFellowship.CDAttachRow rowCDAttach = (Fellowship.DataSources.DSFellowship.CDAttachRow)GV.GetFocusedDataRow();
                         cDAttachTableAdapter.Delete(rowCDAttach.AttachId);
                         gridViewCDAttach.DeleteRow(GV.FocusedRowHandle);
+                        break;
+                    case "gridViewschool":
+                        Fellowship.DataSources.DSFellowship.schoolRow rowschool = (Fellowship.DataSources.DSFellowship.schoolRow)GV.GetFocusedDataRow();
+                        schoolTableAdapter.Delete(rowschool.schoolcode);
+                        gridViewschool.DeleteRow(GV.FocusedRowHandle);
                         break;
                     default:
                         break;

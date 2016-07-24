@@ -28,18 +28,17 @@ namespace Fellowship
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer();
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
             this.mbFellowshipDBChange = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipExit = new DevExpress.XtraBars.BarButtonItem();
-            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer();
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.imageCollection32 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection32 = new DevExpress.Utils.ImageCollection();
             this.mbFellowshipHelp = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipAbout = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipStatus = new DevExpress.XtraBars.BarStaticItem();
@@ -72,6 +71,7 @@ namespace Fellowship
             this.mbFellowshipRoleDetail = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipQry005 = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipQry006 = new DevExpress.XtraBars.BarButtonItem();
+            this.mbFellowshipXRep02 = new DevExpress.XtraBars.BarButtonItem();
             this.DataribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DataribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,7 +95,8 @@ namespace Fellowship
             this.fontStyleButtonGroup = new DevExpress.XtraBars.BarButtonGroup();
             this.alignButtonGroup = new DevExpress.XtraBars.BarButtonGroup();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.mbFellowshipXRep02 = new DevExpress.XtraBars.BarButtonItem();
+            this.mbFellowshipschool = new DevExpress.XtraBars.BarButtonItem();
+            this.mbFellowshiptblmembersp_schools = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
@@ -153,10 +154,12 @@ namespace Fellowship
             this.mbFellowshipRoleDetail,
             this.mbFellowshipQry005,
             this.mbFellowshipQry006,
-            this.mbFellowshipXRep02});
+            this.mbFellowshipXRep02,
+            this.mbFellowshipschool,
+            this.mbFellowshiptblmembersp_schools});
             this.ribbonControl.LargeImages = this.imageCollection32;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 289;
+            this.ribbonControl.MaxItemId = 291;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.mbFellowshipAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -294,6 +297,8 @@ namespace Fellowship
             this.imageCollection32.Images.SetKeyName(24, "Roles.png");
             this.imageCollection32.Images.SetKeyName(25, "UserRoles.png");
             this.imageCollection32.Images.SetKeyName(26, "Users.png");
+            this.imageCollection32.Images.SetKeyName(27, "school32.png");
+            this.imageCollection32.Images.SetKeyName(28, "tblmembersp_schools32.png");
             // 
             // mbFellowshipHelp
             // 
@@ -600,6 +605,15 @@ namespace Fellowship
             this.mbFellowshipQry006.Name = "mbFellowshipQry006";
             this.mbFellowshipQry006.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mbFellowshipQry006_ItemClick);
             // 
+            // mbFellowshipXRep02
+            // 
+            this.mbFellowshipXRep02.Caption = "”Ã· √⁄÷«¡ «·’‰œÊﬁ";
+            this.mbFellowshipXRep02.Id = 288;
+            this.mbFellowshipXRep02.ImageIndex = 4;
+            this.mbFellowshipXRep02.LargeImageIndex = 4;
+            this.mbFellowshipXRep02.Name = "mbFellowshipXRep02";
+            this.mbFellowshipXRep02.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mbFellowshipXRep02_ItemClick);
+            // 
             // DataribbonPage
             // 
             this.DataribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -618,6 +632,7 @@ namespace Fellowship
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipTblHafzaEstlam);
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipTblMemberAttach);
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipDeleteTblAllData);
+            this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshiptblmembersp_schools);
             this.DataribbonPageGroup.Name = "DataribbonPageGroup";
             this.DataribbonPageGroup.Text = "ﬁ«∆„… «œŒ«· «·»Ì«‰« ";
             // 
@@ -642,6 +657,7 @@ namespace Fellowship
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDState);
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDJob);
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDAttach);
+            this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipschool);
             this.CoderibbonPageGroup.Name = "CoderibbonPageGroup";
             this.CoderibbonPageGroup.Text = "ﬁ«∆„… «· ⁄—Ì›«  «·√”«”Ì…";
             // 
@@ -774,14 +790,23 @@ namespace Fellowship
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "File";
             // 
-            // mbFellowshipXRep02
+            // mbFellowshipschool
             // 
-            this.mbFellowshipXRep02.Caption = "”Ã· √⁄÷«¡ «·’‰œÊﬁ";
-            this.mbFellowshipXRep02.Id = 288;
-            this.mbFellowshipXRep02.ImageIndex = 4;
-            this.mbFellowshipXRep02.LargeImageIndex = 4;
-            this.mbFellowshipXRep02.Name = "mbFellowshipXRep02";
-            this.mbFellowshipXRep02.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mbFellowshipXRep02_ItemClick);
+            this.mbFellowshipschool.Caption = "«·„œ«—”";
+            this.mbFellowshipschool.Id = 289;
+            this.mbFellowshipschool.ImageIndex = 27;
+            this.mbFellowshipschool.LargeImageIndex = 27;
+            this.mbFellowshipschool.Name = "mbFellowshipschool";
+            this.mbFellowshipschool.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mbFellowshipschool_ItemClick);
+            // 
+            // mbFellowshiptblmembersp_schools
+            // 
+            this.mbFellowshiptblmembersp_schools.Caption = "„œ«—” «·«⁄÷«¡";
+            this.mbFellowshiptblmembersp_schools.Id = 290;
+            this.mbFellowshiptblmembersp_schools.ImageIndex = 28;
+            this.mbFellowshiptblmembersp_schools.LargeImageIndex = 28;
+            this.mbFellowshiptblmembersp_schools.Name = "mbFellowshiptblmembersp_schools";
+            this.mbFellowshiptblmembersp_schools.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mbFellowshiptblmembersp_schools_ItemClick);
             // 
             // MainFrm
             // 
@@ -884,6 +909,8 @@ namespace Fellowship
         private DevExpress.XtraBars.BarButtonItem mbFellowshipQry005;
         private DevExpress.XtraBars.BarButtonItem mbFellowshipQry006;
         private DevExpress.XtraBars.BarButtonItem mbFellowshipXRep02;
+        private DevExpress.XtraBars.BarButtonItem mbFellowshipschool;
+        private DevExpress.XtraBars.BarButtonItem mbFellowshiptblmembersp_schools;
 
     }
 }

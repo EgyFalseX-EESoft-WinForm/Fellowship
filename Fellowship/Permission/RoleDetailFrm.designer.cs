@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleDetailFrm));
             this.groupControlUpdate = new DevExpress.XtraEditors.GroupControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
-            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer();
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer();
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -44,13 +43,13 @@
             this.CEInsert = new DevExpress.XtraEditors.CheckEdit();
             this.groupControlSelect = new DevExpress.XtraEditors.GroupControl();
             this.LUEItems = new DevExpress.XtraEditors.LookUpEdit();
-            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource();
             this.dsRetirementCenter = new Fellowship.DataSources.DSFellowship();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.roleDetialTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.RoleDetialTableAdapter();
             this.rolesTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.RolesTableAdapter();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.imageCollection32 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection32 = new DevExpress.Utils.ImageCollection();
             this.mbFellowshipExit = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipHelp = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipAbout = new DevExpress.XtraBars.BarButtonItem();
@@ -85,6 +84,8 @@
             this.mbFellowshipQry005 = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipQry006 = new DevExpress.XtraBars.BarButtonItem();
             this.mbFellowshipXRep02 = new DevExpress.XtraBars.BarButtonItem();
+            this.mbFellowshipschool = new DevExpress.XtraBars.BarButtonItem();
+            this.mbFellowshiptblmembersp_schools = new DevExpress.XtraBars.BarButtonItem();
             this.DataribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DataribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -349,10 +350,12 @@
             this.mbFellowshipRoleDetail,
             this.mbFellowshipQry005,
             this.mbFellowshipQry006,
-            this.mbFellowshipXRep02});
+            this.mbFellowshipXRep02,
+            this.mbFellowshipschool,
+            this.mbFellowshiptblmembersp_schools});
             this.ribbonControl.LargeImages = this.imageCollection32;
             this.ribbonControl.Location = new System.Drawing.Point(2, 21);
-            this.ribbonControl.MaxItemId = 289;
+            this.ribbonControl.MaxItemId = 291;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.mbFellowshipAbout);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -398,6 +401,8 @@
             this.imageCollection32.Images.SetKeyName(24, "Roles.png");
             this.imageCollection32.Images.SetKeyName(25, "UserRoles.png");
             this.imageCollection32.Images.SetKeyName(26, "Users.png");
+            this.imageCollection32.Images.SetKeyName(27, "school32.png");
+            this.imageCollection32.Images.SetKeyName(28, "tblmembersp_schools32.png");
             // 
             // mbFellowshipExit
             // 
@@ -692,6 +697,22 @@
             this.mbFellowshipXRep02.LargeImageIndex = 4;
             this.mbFellowshipXRep02.Name = "mbFellowshipXRep02";
             // 
+            // mbFellowshipschool
+            // 
+            this.mbFellowshipschool.Caption = "المدارس";
+            this.mbFellowshipschool.Id = 289;
+            this.mbFellowshipschool.ImageIndex = 27;
+            this.mbFellowshipschool.LargeImageIndex = 27;
+            this.mbFellowshipschool.Name = "mbFellowshipschool";
+            // 
+            // mbFellowshiptblmembersp_schools
+            // 
+            this.mbFellowshiptblmembersp_schools.Caption = "مدارس الاعضاء";
+            this.mbFellowshiptblmembersp_schools.Id = 290;
+            this.mbFellowshiptblmembersp_schools.ImageIndex = 28;
+            this.mbFellowshiptblmembersp_schools.LargeImageIndex = 28;
+            this.mbFellowshiptblmembersp_schools.Name = "mbFellowshiptblmembersp_schools";
+            // 
             // DataribbonPage
             // 
             this.DataribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -710,6 +731,7 @@
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipTblHafzaEstlam);
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipTblMemberAttach);
             this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshipDeleteTblAllData);
+            this.DataribbonPageGroup.ItemLinks.Add(this.mbFellowshiptblmembersp_schools);
             this.DataribbonPageGroup.Name = "DataribbonPageGroup";
             this.DataribbonPageGroup.Text = "قائمة ادخال البيانات";
             // 
@@ -734,6 +756,7 @@
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDState);
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDJob);
             this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipCDAttach);
+            this.CoderibbonPageGroup.ItemLinks.Add(this.mbFellowshipschool);
             this.CoderibbonPageGroup.Name = "CoderibbonPageGroup";
             this.CoderibbonPageGroup.Text = "قائمة التعريفات الأساسية";
             // 
@@ -916,6 +939,8 @@
         private DevExpress.XtraBars.BarButtonItem mbFellowshipQry005;
         private DevExpress.XtraBars.BarButtonItem mbFellowshipQry006;
         private DevExpress.XtraBars.BarButtonItem mbFellowshipXRep02;
+        private DevExpress.XtraBars.BarButtonItem mbFellowshipschool;
+        private DevExpress.XtraBars.BarButtonItem mbFellowshiptblmembersp_schools;
         private DevExpress.XtraBars.Ribbon.RibbonPage DataribbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup DataribbonPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;

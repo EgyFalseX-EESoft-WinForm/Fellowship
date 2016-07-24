@@ -344,6 +344,16 @@ namespace Fellowship
             }));
             SplashScreenManager.CloseForm();
         }
+        private void mbFellowshipschool_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
+            this.Invoke(new MethodInvoker(() =>
+            {
+                CodeFrm FrmCode = new CodeFrm(Types.TablesNames.school) { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["school32.png"], 32, false) };
+                FrmCode.Show();
+            }));
+            SplashScreenManager.CloseForm();
+        }
         private void mbFellowshipTBLEdaraMandop_ItemClick(object sender, ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
@@ -434,6 +444,16 @@ namespace Fellowship
             }));
             SplashScreenManager.CloseForm();
         }
+        private void mbFellowshiptblmembersp_schools_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
+            this.Invoke(new MethodInvoker(() =>
+            {
+                tblmembersp_schoolsFrm Data = new tblmembersp_schoolsFrm() { MdiParent = this, Icon = FXFW.SqlDB.MakeIcon(imageCollection32.Images["tblmembersp_schools32.png"], 32, false) };
+                Data.Show();
+            }));
+            SplashScreenManager.CloseForm();
+        }
         private void mbFellowshipXRep02_ItemClick(object sender, ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(Forms.Main.WaitWindowFrm));
@@ -505,6 +525,10 @@ namespace Fellowship
             SplashScreenManager.CloseForm();
         }
         #endregion
+
+        
+
+        
 
         
     

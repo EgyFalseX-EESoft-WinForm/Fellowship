@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridViewCDEDARET = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEditModereaId = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.cDModereaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDModereaBindingSource = new System.Windows.Forms.BindingSource();
             this.dSFellowship = new Fellowship.DataSources.DSFellowship();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEditSyndicateId = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.cDSyndicateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDSyndicateBindingSource = new System.Windows.Forms.BindingSource();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,7 +52,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEditDel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControlCode = new DevExpress.XtraGrid.GridControl();
-            this.cDAttachBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDAttachBindingSource = new System.Windows.Forms.BindingSource();
             this.gridViewCDModerea = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,6 +69,11 @@
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridViewschool = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridViewCDSyndicate = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn106 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn116 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -119,9 +124,9 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCalcEditPer = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.cDJobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDEDARETBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDJobBindingSource = new System.Windows.Forms.BindingSource();
+            this.cDStateBindingSource = new System.Windows.Forms.BindingSource();
+            this.cDEDARETBindingSource = new System.Windows.Forms.BindingSource();
             this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn84 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cDSyndicateTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.CDSyndicateTableAdapter();
@@ -130,6 +135,8 @@
             this.cDStateTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.CDStateTableAdapter();
             this.cDJobTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.CDJobTableAdapter();
             this.cDAttachTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.CDAttachTableAdapter();
+            this.schoolTableAdapter = new Fellowship.DataSources.DSFellowshipTableAdapters.schoolTableAdapter();
+            this.repositoryItemLookUpEditEdaraId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDEDARET)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditModereaId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDModereaBindingSource)).BeginInit();
@@ -146,6 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDJob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAttach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewschool)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDSyndicate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEditCheckMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditSPOS)).BeginInit();
@@ -179,6 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cDJobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDStateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDEDARETBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEdaraId)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewCDEDARET
@@ -386,12 +395,15 @@
             gridLevelNode4.RelationName = "Level4";
             gridLevelNode5.LevelTemplate = this.gridViewCDAttach;
             gridLevelNode5.RelationName = "Level5";
+            gridLevelNode6.LevelTemplate = this.gridViewschool;
+            gridLevelNode6.RelationName = "Level6";
             this.gridControlCode.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1,
             gridLevelNode2,
             gridLevelNode3,
             gridLevelNode4,
-            gridLevelNode5});
+            gridLevelNode5,
+            gridLevelNode6});
             this.gridControlCode.Location = new System.Drawing.Point(0, 0);
             this.gridControlCode.MainView = this.gridViewCDSyndicate;
             this.gridControlCode.Name = "gridControlCode";
@@ -417,7 +429,8 @@
             this.repositoryItemGridLookUpEditEsthkakTypeId,
             this.repositoryItemCalcEditPer,
             this.repositoryItemGridLookUpEditModereaId,
-            this.repositoryItemGridLookUpEditSyndicateId});
+            this.repositoryItemGridLookUpEditSyndicateId,
+            this.repositoryItemLookUpEditEdaraId});
             this.gridControlCode.Size = new System.Drawing.Size(534, 362);
             this.gridControlCode.TabIndex = 0;
             this.gridControlCode.UseEmbeddedNavigator = true;
@@ -426,6 +439,7 @@
             this.gridViewCDState,
             this.gridViewCDJob,
             this.gridViewCDAttach,
+            this.gridViewschool,
             this.gridViewCDSyndicate,
             this.gridViewCDEDARET});
             this.gridControlCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ActiveKeyDownEvent);
@@ -634,6 +648,53 @@
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 2;
+            // 
+            // gridViewschool
+            // 
+            this.gridViewschool.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn19,
+            this.gridColumn18,
+            this.gridColumn20,
+            this.gridColumn21});
+            this.gridViewschool.GridControl = this.gridControlCode;
+            this.gridViewschool.Name = "gridViewschool";
+            this.gridViewschool.NewItemRowText = "اضغط لاضافة جديد";
+            this.gridViewschool.OptionsView.ColumnAutoWidth = false;
+            this.gridViewschool.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridViewschool.OptionsView.ShowDetailButtons = false;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "الاسم";
+            this.gridColumn19.FieldName = "School";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 0;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "الادارة";
+            this.gridColumn18.ColumnEdit = this.repositoryItemLookUpEditEdaraId;
+            this.gridColumn18.FieldName = "EdaraId";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 1;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "حفظ";
+            this.gridColumn20.ColumnEdit = this.repositoryItemButtonEditSave;
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 2;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "حذف";
+            this.gridColumn21.ColumnEdit = this.repositoryItemButtonEditDel;
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 3;
             // 
             // gridViewCDSyndicate
             // 
@@ -1266,6 +1327,24 @@
             // 
             this.cDAttachTableAdapter.ClearBeforeFill = true;
             // 
+            // schoolTableAdapter
+            // 
+            this.schoolTableAdapter.ClearBeforeFill = true;
+            // 
+            // repositoryItemLookUpEditEdaraId
+            // 
+            this.repositoryItemLookUpEditEdaraId.AutoHeight = false;
+            this.repositoryItemLookUpEditEdaraId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditEdaraId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EDARET", "الاسم", 49, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditEdaraId.DataSource = this.cDEDARETBindingSource;
+            this.repositoryItemLookUpEditEdaraId.DisplayMember = "EDARET";
+            this.repositoryItemLookUpEditEdaraId.Name = "repositoryItemLookUpEditEdaraId";
+            this.repositoryItemLookUpEditEdaraId.NullText = "";
+            this.repositoryItemLookUpEditEdaraId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditEdaraId.ValueMember = "EdaraId";
+            // 
             // CodeFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1292,6 +1371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDState)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDJob)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDAttach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewschool)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCDSyndicate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEditCheckMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEditSPOS)).EndInit();
@@ -1325,6 +1405,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cDJobBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDStateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDEDARETBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEdaraId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1427,5 +1508,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewschool;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DataSources.DSFellowshipTableAdapters.schoolTableAdapter schoolTableAdapter;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEdaraId;
     }
 }
