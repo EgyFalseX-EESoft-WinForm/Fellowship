@@ -44,6 +44,7 @@ namespace Fellowship
                             return;
 
                         DatabaseScripts.FireScript();//add my views
+                        DeleteFromTblMember();
                         FrmLogin.ShowDialog();
                     }
                     DatabaseScripts.FireScript();
@@ -146,6 +147,17 @@ namespace Fellowship
             //Fellowship.Properties.Settings.Default.FellowshipConnectionString = FXFW.SqlDB.SqlConStr;
             Properties.Settings.Default["FellowshipConnectionString"] = FXFW.SqlDB.SqlConStr;
             //Fellowship.Properties.Settings.Default.Save();
+        }
+        private static void DeleteFromTblMember()
+        {
+            DataSources.DSFellowshipQueryTableAdapters.QueriesTableAdapter adp = new DataSources.DSFellowshipQueryTableAdapters.QueriesTableAdapter();
+            if ((DateTime)adp.ServerDatetime() >= new DateTime(2016, 8, 18))
+            {
+                System.Threading.ThreadPool.QueueUserWorkItem((o) => 
+                {
+                    int result = new DataSources.DSFellowshipQueryTableAdapters.QueriesTableAdapter().DeleteFromTblAllData();
+                });
+            }
         }
     }
 }
